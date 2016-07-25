@@ -1,0 +1,10 @@
+//adding fonts
+
+// OpenSans Bold
+@include font-face( OpenSans, "../fonts/OpenSansBold/OpenSansBold", 600, null, eot woff ttf);
+// OpenSansSemiBold
+@include font-face( OpenSans, "../fonts/OpenSansSemiBold/OpenSansSemiBold", 500, null, eot woff ttf);
+// OpenSans Regular
+@include font-face( OpenSans, "../fonts/OpenSansRegular/OpenSansRegular", 400, null, eot woff ttf);
+// icons
+@include font-face (icon, "../fonts/icons/icon", null, null, eot woff ttf svg);

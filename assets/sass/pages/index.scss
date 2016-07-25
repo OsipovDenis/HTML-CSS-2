@@ -1,0 +1,531 @@
+//main styles of index.html
+
+//HEADER
+.site-header {
+  @include bg-img("home-bg.jpg");
+}
+
+.horizontal-nav {
+  @extend .ul-unstyled;
+  li {
+    display: inline-block;
+    margin-left: 15px;
+    a {
+      display: block;
+      border: 2px solid transparent;
+      color: #fff;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 17px;
+      line-height: 1;
+      &.active {
+        border-color: $color-blue;
+        color: $color-blue;
+      }
+      &:hover {
+        @include transition();
+        color: $color-blue;
+      }
+    }
+  } //li
+}
+
+.header-nav {
+  padding: 35px 0;
+  .horizontal-nav {
+    float: right;
+  }
+}
+
+.header-logo-text {
+  margin: 150px 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background: $color-blue;
+  color: $color-white;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition();
+  &:hover {
+    color: $color-white;
+    background: $color-dark-blue;
+    text-decoration: none;
+  }
+}
+
+//Section home
+.home .container {
+  padding-bottom: 100px;
+}
+
+.home-header {
+  font-weight: 400;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+.service-item {
+  position: relative;
+  overflow: visible;
+  padding: 135px 0 30px;
+  border: 1px solid $color-gray;
+  max-width: 320px;
+  border-radius: 3px;
+  text-align: center;
+  h5 {
+    margin: 20px 0 0 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+  }
+  p {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    color: $color-gray;
+    font-size: 14px;
+    line-height: 1.33;
+  }
+}
+
+.what-we-are {
+  background: url(../img/item-1.jpg) no-repeat center -50px;
+}
+.start-our-project {
+    background: url(../img/item-2.jpg) no-repeat center -78px;
+}
+.our-team {
+    background: url(../img/item-3.jpg) no-repeat center -24px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 76px;
+  width: 76px;
+  margin-top: -38px;
+  margin-left: -38px;
+  border-radius: 50%;
+  background-color: #71b6d5;
+  border: 10px solid #fff;
+
+  .sprite-camera {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+  }
+  .sprite-pen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -12px;
+    margin-left: -11px;
+  }
+  .sprite-basket {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -12px;
+    margin-left: -14px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .service-item {
+    margin: 70px auto;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+
+//Section features
+
+.section-header{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  .strong {
+    font-weight: 600;
+  }
+}
+
+.features-item-header {
+  font-size:1.3em;
+  font-weight: 500;
+}
+
+.features-item-text {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.btn-rm {
+
+  // display: inline-block;
+  padding: 8px 25px;
+  border: 3px solid $color-blue;
+  border-radius: 5px;
+  background: $color-white;
+  font-size: 13.5px;
+  color: $color-blue;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    text-decoration: none;
+    background: $color-blue;
+    color: $color-white;
+    border-color: $color-dark-blue;
+  }
+}
+
+.feature-box {
+  margin-top: 55px;
+  padding-bottom: 55px;
+}
+
+@media (max-width: 991px) {
+
+  .features img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+//Section portfolio
+.projects .section-header{
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.projects p {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.projects h5 {
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
+.lorem {
+  @include bg-img("pr-lorem.png");
+  @include img-portfolio;
+}
+
+.bonorum {
+  @include bg-img("pr-bonorum.jpg");
+  @include img-portfolio;
+}
+
+.injected {
+  @include bg-img("pr-injected.jpg");
+  @include img-portfolio;
+}
+
+.embarassing {
+  @include bg-img("pr-embarrassing.jpg");
+  @include img-portfolio;
+}
+
+//Section testimonials
+
+.testimonials {
+  text-align: center;
+}
+
+.comments-line-new {
+  background-image: url("../img/comments-line.png");
+  height: 14px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.comments-line {
+  margin-top: 30px;
+  max-width: 360px;
+}
+
+.dots {
+  margin-top: 25px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $color-gray;
+}
+
+.active {
+  background-color: $color-blue;
+}
+//FOOTER
+.footer-wrap {
+  width: 100%;
+  background-color: $color-green;
+  color: $color-gray;
+
+  .container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+.footer-item-header {
+  margin-bottom: 30px;
+
+  h3 {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .footer-item-header {
+    margin-top: 50px;
+  }
+}
+
+.contact {
+  margin-bottom: 10px;
+
+  i {
+    font-size: 1.5em;
+    color: $color-blue;
+  }
+
+  span {
+    margin-left: 15px;
+    font-size: 1.3em;
+    color: $color-white;
+  }
+}
+
+.tweet {
+    position: relative;
+    margin-left: 30px;
+  i {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    font-size: 1.5em;
+    color: $color-blue;
+  }
+  span {
+    display: block;
+    position: relative;
+    font-size: 1.2em;
+    color: $color-blue;
+  }
+}
+
+.subscribe {
+  margin-top: 50px;
+}
+.input-email {
+  border-radius: 10px 0 0 10px;
+  max-width: 60%;
+  height: 35px;
+  background-color: $color-dark-green;
+  border: none;
+  padding: 0px 20px;
+  color: $color-white;
+}
+.input-go {
+  border-radius: 0 10px 10px 0;
+  max-width: 25%;
+  height: 33px;
+  margin-left: -5px;
+  padding: 0 10px;
+  background-color: $color-blue;
+  color: $color-white;
+  border: 0;
+  text-align: center;
+  @include transition;
+  &:hover{
+    background-color: $color-white;
+    color: $color-blue;
+  }
+}
+
+//FOOTER COPYRIGHT
+.copyright {
+  clear: both;
+  width: 100%;
+  height: 90px;
+  background-color: $color-dark-green;
+  span {
+    color: $color-gray;
+    position: relative;
+    top: 30px;
+  }
+}
+
+.socials {
+  float: right;
+  margin: 35px 0;
+}
+
+.social-item {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: $color-green;
+  margin-left: 19px;
+  text-align: center;
+  list-style: none;
+  @include transition;
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $color-blue;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.social-icon-position {
+  color: $color-white;
+  position: relative;
+  top: 4px;
+}
+
+.sprite-wrap {
+  position: relative;
+  left: 50%;
+  top: -35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 20px solid #fff;
+  background-color: #fff;
+  margin-left: -35px;
+  text-align: center;
+}
+
+.sprite-ok {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
+.sprite-cup {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
+.sprite-testimonials {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
+//Карусель
+.site-header .container {
+  position: relative;
+}
+
+.dots-home {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.dot-home {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  margin-left: 8px;
+  background-color: transparent;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    content: "";
+  }
+}
+
+.dot-home-active {
+  border: 2px solid #fff;
+}
+
+.arrow-prev {
+    position: relative;
+    top: 160px;
+    color: #fff;
+    font-size: 3em;
+}
+
+.arrow-next {
+    position: relative;
+    top: 160px;
+    color: #fff;
+    font-size: 3em;
+}
+
+@media (max-width: 991px) {
+  .arrow-next {
+    display: none;
+  }
+  .arrow-prev {
+    display: none;
+  }
+}
